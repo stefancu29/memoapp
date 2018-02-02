@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 var mustache = require('mustache'); // bring in mustache template engine
 
-var path = '/home/pi/pathtofile';
+var path = '/home/pi/Documents/Programmieren/memoapp';
 var pathMemo = '/home/pi/MagicMirror/modules/MMM-Memo/';
 
 var demoData = [{ // dummy data to display
