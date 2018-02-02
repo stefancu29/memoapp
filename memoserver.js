@@ -19,7 +19,7 @@ var demoData = [{ // dummy data to display
 {"memoTitle":"einkaufsliste","level":"INFO",
 "item":"Obst","timestamp":"2018-01-29T19:30:55.311Z"},
 {"memoTitle":"einkaufsliste","level":"INFO",
-"item":"Fischi","timestamp":"2018-01-30T00:04:15.919Z"}
+"item":"Zwiebel","timestamp":"2018-01-30T00:04:15.919Z"}
 ];
 
 // define routes here..
