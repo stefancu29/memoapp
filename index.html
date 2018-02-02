@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <h1>Einkaufsliste</h1>
+
+        <table>
+            <th>Einkaufsliste</th>
+            {{#memos}}
+            <tr>
+                <td>{{item}}</td>
+                <td>Level: {{level}}</td>
+            <tr>
+            {{/memos}}
+        </table>
+
+        <table>
+            <tr>
+                <td>
+                    <form action="/submit-additem" method="post">
+                        <input type="submit" value="Add Item" />
+                    </form>
+                </td>
+                <td>
+                    <form action="/submit-deleteitem" method="post">
+                        <input type="submit" value="Delete Item" />
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+
+    <h1>Einkaufsliste</h1>
+
+    <form action="/submit-deleteitem-data" method="post">
+    <fieldset>
+    {{#memos}}
+    <ul>
+      <li>
+        <label>
+          <input type="checkbox" name="DeleteItem" value={{itemnumber}}>
+          {{itemnumber}}  {{item}}
+        </label>
+      </li>
+    </ul>
+    {{/memos}}
+    </fieldset>
+        <input type="submit" value="delete Item" />
+    </form>
+    </body>
+</html>
