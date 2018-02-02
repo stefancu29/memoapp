@@ -10,7 +10,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 var mustache = require('mustache'); // bring in mustache template engine
 
+<<<<<<< HEAD
 var path = '/home/pi/Documents/Programmieren/memoapp/';
+=======
+var path = '/home/pi/pathtofile';
+>>>>>>> 676954c118f426f12678bbe89b56e1a3f6263888
 var pathMemo = '/home/pi/MagicMirror/modules/MMM-Memo/';
 
 var demoData = [{ // dummy data to display
@@ -19,7 +23,7 @@ var demoData = [{ // dummy data to display
 {"memoTitle":"einkaufsliste","level":"INFO",
 "item":"Obst","timestamp":"2018-01-29T19:30:55.311Z"},
 {"memoTitle":"einkaufsliste","level":"INFO",
-"item":"Fischi","timestamp":"2018-01-30T00:04:15.919Z"}
+"item":"Zwiebel","timestamp":"2018-01-30T00:04:15.919Z"}
 ];
 
 // define routes here..
