@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 var mustache = require('mustache'); // bring in mustache template engine
 
-var path = '/home/pi/Documents/Programmieren/memoapp';
+//var path = '/home/pi/Documents/Programmieren/memoapp';
 var pathMemo = '/home/pi/MagicMirror/modules/MMM-Memo/';
 
 var demoData = [{ // dummy data to display
@@ -26,7 +26,7 @@ var demoData = [{ // dummy data to display
 app.get('/', function (req, res) {
     var rData = JSON.parse(fs.readFileSync(pathMemo + 'MMM-Memo.json', 'utf-8'));
     //var rData = {'memos':demoData}; // wrap the data in a global object... (mustache starts from an object then parses)
-    var page = fs.readFileSync(path + 'index.html', "utf8"); // bring in the HTML file
+    var page = fs.readFileSync(__dirname + '/index.html', "utf8"); // bring in the HTML file
     var html = mustache.to_html(page, rData); // replace all of the data
     console.log(rData);
     res.send(html); // send to client
@@ -34,7 +34,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/additem', function (req, res) {
-    res.sendFile(path + 'additem.html');
+    res.sendFile(__dirname + '/additem.html');
 });
 
 app.get('/deleteitem', function (req, res) {
@@ -49,7 +49,7 @@ app.get('/deleteitem', function (req, res) {
     }
     console.log(rData);
     //var rData = {'memos':demoData}; // wrap the data in a global object... (mustache starts from an object then parses)
-    var page = fs.readFileSync(path + 'deleteitem.html', "utf8"); // bring in the HTML file
+    var page = fs.readFileSync(__dirname + '/deleteitem.html', "utf8"); // bring in the HTML file
     var html = mustache.to_html(page, rData); // replace all of the data
     res.send(html);
 });
@@ -106,4 +106,3 @@ app.delete('/delete-data', function (req, res) {
 var server = app.listen(8888, function () {
     console.log('Node server is running..');
 });
-

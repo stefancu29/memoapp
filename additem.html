@@ -1,15 +1,42 @@
 
 <!DOCTYPE html>
+<style>
 
+    body {background-color: powderblue;}
+    h1  {border: 1px solid black;
+        text-align: center;
+        padding: 30px;
+        margin: 20px;
+        width: 800px;
+        color: DarkSlateGray ;
+        }
+    #additemform {
+        margin:40px;
+        width: 800px;
+        text-align:center;
+        border: 1px solid black;
+        font-size: 130%;
+    }
+    input {
+        margin-top: 20px;
+        /*font-size: 100%;*/
+    }
+    /*table, th, td {
+        border: 1px solid black;
+    }*/
+</style>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="utf-8" />
         <title></title>
     </head>
     <body>
-        <form action="/submit-additem-data" method="post">
-        Add Item: <input name="AddItem" type="text" /> <br />
-        <input type="submit" value="Add Item" />
-    </form>
+        <h1>Einkaufsliste</h1>
+        <div id="additemform">
+            <form action="/submit-additem-data" method="post">
+                Add Item: <input name="AddItem" type="text" /> <br />
+                <input type="submit" value="Add Item" />
+            </form>
+        </div>
     </body>
 </html>
